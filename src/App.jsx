@@ -8,6 +8,7 @@ import StudentPortal from "./components/StudentPortal";
 import TeacherDashboard from "./components/TeacherDashboard";
 import StudentResults from "./components/StudentResults";
 import ReportCard from "./components/ReportCard";
+import SchoolSelector from "./components/SchoolSelector";
 export default function App() {
   return (
     <div>
@@ -70,9 +71,19 @@ export default function App() {
   </div>
 </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+     <Route
+  path="/"
+  element={<SchoolSelector />}
+/>
+<Route
+  path="/senior"
+  element={<Home />}
+/>
 
+<Route
+  path="/junior"
+  element={<Home />}
+/>
         <Route
           path="/admission"
           element={<Admission />}
