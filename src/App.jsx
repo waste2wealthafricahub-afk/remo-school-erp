@@ -71,48 +71,59 @@ export default function App() {
   </div>
 </nav>
 
-     <Route
-  path="/"
-  element={<SchoolSelector />}
-/>
-<Route
-  path="/senior"
-  element={<Home />}
-/>
+<Routes>
 
-<Route
-  path="/junior"
-  element={<Home />}
-/>
-        <Route
-          path="/admission"
-          element={<Admission />}
-        />
-        <Route path="/login" element={<Login />} />   
-        <Route
-          path="/dashboard"
-          element={<AdminDashboard />}
-        />
-        <Route
-          path="/teacher"
-          element={<TeacherDashboard />}
-        />
-        <Route
-  path="/report-card"
-  element={<ReportCard />}
-/>
-        <Route
-          path="/student"
-          element={<StudentPortal />}
-        />
-        <Route
-           path="/results"
-           element={<StudentResults />}
-        />
-       <Route
-  path="/results"
-  element={<StudentResults />}
-/>
+  <Route
+    path="/"
+    element={<SchoolSelector />}
+  />
+
+  <Route
+    path="/senior"
+    element={<Home />}
+  />
+
+  <Route
+    path="/junior"
+    element={<Home />}
+  />
+
+  <Route
+    path="/admission"
+    element={<Admission />}
+  />
+
+  <Route
+    path="/login"
+    element={<Login />}
+  />
+
+  <Route
+    path="/dashboard"
+    element={<AdminDashboard />}
+  />
+
+  <Route
+    path="/teacher"
+    element={<TeacherDashboard />}
+  />
+
+  <Route
+    path="/student"
+    element={<StudentPortal />}
+  />
+
+  <Route
+    path="/results"
+    element={<StudentResults />}
+  />
+
+  <Route
+    path="/report-card"
+    element={<ReportCard />}
+  />
+
+</Routes>
     </div>
   );
 }
