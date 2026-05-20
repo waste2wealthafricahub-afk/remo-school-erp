@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import StudentPortal from "./components/StudentPortal";
 import TeacherDashboard from "./components/TeacherDashboard";
 import StudentResults from "./components/StudentResults";
+import ReportCard from "./components/ReportCard";
 export default function App() {
   return (
     <div>
@@ -59,7 +60,13 @@ export default function App() {
       >
         Results
       </Link>
-    </div>
+      <Link
+  to="/report-card"
+  className="hover:text-yellow-300 transition"
+>
+  Report Card
+</Link>
+      </div>
   </div>
 </nav>
 
@@ -80,12 +87,20 @@ export default function App() {
           element={<TeacherDashboard />}
         />
         <Route
+  path="/report-card"
+  element={<ReportCard />}
+/>
+        <Route
           path="/student"
           element={<StudentPortal />}
         />
         <Route
            path="/results"
            element={<StudentResults />}
+        />
+        <Route
+            path="/report-card"
+            element={<ReportCard />}
         />
       </Routes>
     </div>
