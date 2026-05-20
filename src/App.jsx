@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 
 import Home from "./components/Home";
 import Admission from "./components/Admission";
@@ -9,127 +9,132 @@ import TeacherDashboard from "./components/TeacherDashboard";
 import StudentResults from "./components/StudentResults";
 import ReportCard from "./components/ReportCard";
 import SchoolSelector from "./components/SchoolSelector";
+
 export default function App() {
+  const location = useLocation();
+
   return (
     <div>
-     <nav className="bg-blue-900 text-white shadow-lg">
-  <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap gap-6 items-center justify-between">
-    
-    <h1 className="text-2xl font-bold">
-      Remo Secondary School
-    </h1>
 
-    <div className="flex flex-wrap gap-5">
-      <Link
-        to="/"
-        className="hover:text-yellow-300 transition"
-      >
-        Home
-      </Link>
+      {/* Hide navbar on homepage */}
+      {location.pathname !== "/" && (
+        <nav className="bg-blue-900 text-white shadow-lg">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap gap-6 items-center justify-between">
 
-      <Link
-        to="/admission"
-        className="hover:text-yellow-300 transition"
-      >
-        Admission
-      </Link>
+            <h1 className="text-2xl font-bold">
+              Remo Secondary School
+            </h1>
 
-      <Link
-        to="/dashboard"
-        className="hover:text-yellow-300 transition"
-      >
-        Admin
-      </Link>
+            <div className="flex flex-wrap gap-5">
 
-      <Link
-        to="/teacher"
-        className="hover:text-yellow-300 transition"
-      >
-        Teacher
-      </Link>
+              <Link
+                to="/"
+                className="hover:text-yellow-300 transition"
+              >
+                Home
+              </Link>
 
-      <Link
-        to="/student"
-        className="hover:text-yellow-300 transition"
-      >
-        Student Portal
-      </Link>
+              <Link
+                to="/admission"
+                className="hover:text-yellow-300 transition"
+              >
+                Admission
+              </Link>
 
-      <Link
-        to="/results"
-        className="hover:text-yellow-300 transition"
-      >
-        Results
-      </Link>
-      <Link
-  to="/report-card"
-  className="hover:text-yellow-300 transition"
->
-  Report Card
-</Link>
-      </div>
-  </div>
-</nav>
+              <Link
+                to="/dashboard"
+                className="hover:text-yellow-300 transition"
+              >
+                Admin
+              </Link>
 
-<Routes>
+              <Link
+                to="/teacher"
+                className="hover:text-yellow-300 transition"
+              >
+                Teacher
+              </Link>
 
-  <Route
-    path="/"
-    element={<SchoolSelector />}
-  />
+              <Link
+                to="/student"
+                className="hover:text-yellow-300 transition"
+              >
+                Student Portal
+              </Link>
 
-  <Route
-    path="/senior"
-    element={<Home />}
-  />
+              <Link
+                to="/results"
+                className="hover:text-yellow-300 transition"
+              >
+                Results
+              </Link>
 
-  <Route
-    path="/junior"
-    element={<Home />}
-  />
+              <Link
+                to="/report-card"
+                className="hover:text-yellow-300 transition"
+              >
+                Report Card
+              </Link>
 
-  <Route
-    path="/admission"
-    element={<Admission />}
-  />
+            </div>
+          </div>
+        </nav>
+      )}
 
-  <Route
-    path="/login"
-    element={<Login />}
-  />
+      <Routes>
 
-  <Route
-    path="/dashboard"
-    element={<AdminDashboard />}
-  />
+        <Route
+          path="/"
+          element={<SchoolSelector />}
+        />
 
-  <Route
-    path="/teacher"
-    element={<TeacherDashboard />}
-  />
+        <Route
+          path="/senior"
+          element={<Home />}
+        />
 
-  <Route
-    path="/student"
-    element={<StudentPortal />}
-  />
+        <Route
+          path="/junior"
+          element={<Home />}
+        />
 
-  <Route
-    path="/results"
-    element={<StudentResults />}
-  />
+        <Route
+          path="/admission"
+          element={<Admission />}
+        />
 
-  <Route
-    path="/report-card"
-    element={<ReportCard />}
-  />
+        <Route
+          path="/login"
+          element={<Login />}
+        />
 
-</Routes>
+        <Route
+          path="/dashboard"
+          element={<AdminDashboard />}
+        />
+
+        <Route
+          path="/teacher"
+          element={<TeacherDashboard />}
+        />
+
+        <Route
+          path="/student"
+          element={<StudentPortal />}
+        />
+
+        <Route
+          path="/results"
+          element={<StudentResults />}
+        />
+
+        <Route
+          path="/report-card"
+          element={<ReportCard />}
+        />
+
+      </Routes>
+
     </div>
   );
 }
-
-const linkStyle = {
-  color: "white",
-  textDecoration: "none",
-  fontWeight: "bold",
-};
