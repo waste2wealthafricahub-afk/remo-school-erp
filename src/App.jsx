@@ -83,10 +83,10 @@ export default function App() {
 
       <Routes>
 
-        <Route
-          path="/"
-          element={<SchoolSelector />}
-        />
+     <Route
+  path="/welcome"
+  element={<SchoolSelector />}
+/>
 
         <Route
           path="/senior"
