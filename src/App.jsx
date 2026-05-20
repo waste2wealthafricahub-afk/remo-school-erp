@@ -109,11 +109,10 @@ export default function App() {
            path="/results"
            element={<StudentResults />}
         />
-        <Route
-            path="/report-card"
-            element={<ReportCard />}
-        />
-      </Routes>
+       <Route
+  path="/results"
+  element={<StudentResults />}
+/>
     </div>
   );
 }
