@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import schoolImage from "../images/school.jpg";
 import principalImage from "../images/principal.jpg";
+import gallery1 from "../images/gallery1.jpg";
+import gallery2 from "../images/gallery2.jpg";
+import gallery3 from "../images/gallery3.jpg";
+import gallery4 from "../images/gallery4.jpg";
 
 export default function SeniorHome() {
   return (
@@ -89,7 +93,49 @@ export default function SeniorHome() {
           </Link>
         </div>
       </section>
+<section className="max-w-6xl mx-auto py-16 px-6">
+  <h2 className="text-4xl font-bold text-center text-blue-900 mb-10">
+    School Gallery
+  </h2>
 
+  <div className="grid md:grid-cols-2 gap-6">
+    <img src={gallery1} alt="" className="rounded-2xl shadow-xl" />
+    <img src={gallery2} alt="" className="rounded-2xl shadow-xl" />
+    <img src={gallery3} alt="" className="rounded-2xl shadow-xl" />
+    <img src={gallery4} alt="" className="rounded-2xl shadow-xl" />
+  </div>
+</section>
+<section className="bg-gray-200 py-16 px-6">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold text-center text-blue-900 mb-10">
+      Our Strength in Numbers
+    </h2>
+
+    <div className="grid md:grid-cols-4 gap-6 text-center">
+
+      <div className="bg-white rounded-2xl shadow-xl p-8">
+        <h3 className="text-4xl font-bold text-blue-900">50+</h3>
+        <p>Years of Legacy</p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-xl p-8">
+        <h3 className="text-4xl font-bold text-blue-900">2000+</h3>
+        <p>Students</p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-xl p-8">
+        <h3 className="text-4xl font-bold text-blue-900">100+</h3>
+        <p>Teachers</p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-xl p-8">
+        <h3 className="text-4xl font-bold text-blue-900">95%</h3>
+        <p>Exam Success Rate</p>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* CONTACT */}
       <section className="bg-blue-900 text-white py-16 px-6">
         <div className="max-w-6xl mx-auto">
