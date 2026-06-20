@@ -9,6 +9,7 @@ import TeacherDashboard from "./components/TeacherDashboard";
 import StudentResults from "./components/StudentResults";
 import ReportCard from "./components/ReportCard";
 import SchoolSelector from "./components/SchoolSelector";
+import SeniorHome from "./components/SeniorHome";
 
 export default function App() {
   const location = useLocation();
@@ -89,9 +90,9 @@ export default function App() {
 />
 
         <Route
-          path="/senior"
-          element={<Home />}
-        />
+  path="/senior"
+  element={<SeniorHome />}
+/>
 
         <Route
           path="/junior"
