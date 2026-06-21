@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import schoolImage from "../images/school.jpg";
-import logoImage from "../images/logo.jpg";
-
+import schoolImage from "../images/Senior/gate-snr.jpg";
+import logoImage from "../images/Junior/logo-jnr.jpg";
 export default function SchoolSelector() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 to-blue-600 text-white px-6 py-16">
