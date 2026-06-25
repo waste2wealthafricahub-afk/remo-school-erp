@@ -105,37 +105,71 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-100 flex">
 
       {/* SIDEBAR */}
-      <aside className="w-72 bg-blue-900 text-white p-8 hidden md:block">
+<aside className="w-72 bg-blue-900 text-white p-8 hidden md:block">
+  <h1 className="text-3xl font-bold mb-12">
+    Admin Panel
+  </h1>
 
-        <h1 className="text-3xl font-bold mb-12">
-          Admin Panel
-        </h1>
+  <nav className="space-y-5">
+    <p className="hover:text-yellow-300 cursor-pointer">
+      Dashboard
+    </p>
 
-        <nav className="space-y-5">
+    <p className="hover:text-yellow-300 cursor-pointer">
+      Admissions
+    </p>
 
-          <p className="hover:text-yellow-300 cursor-pointer">
-            Dashboard
-          </p>
+    <p
+      onClick={() =>
+        navigate("/student-registration")
+      }
+      className="hover:text-yellow-300 cursor-pointer"
+    >
+      Add Student
+    </p>
 
-          <p className="hover:text-yellow-300 cursor-pointer">
-            Admissions
-          </p>
+    <p
+      onClick={() =>
+        navigate("/student-database")
+      }
+      className="hover:text-yellow-300 cursor-pointer"
+    >
+      Student Database
+    </p>
 
-          <p className="hover:text-yellow-300 cursor-pointer">
-            Students
-          </p>
+    <p
+      onClick={() => navigate("/subjects")}
+      className="hover:text-yellow-300 cursor-pointer"
+    >
+      Subjects
+    </p>
 
-          <p className="hover:text-yellow-300 cursor-pointer">
-            Results
-          </p>
-
-          <p className="hover:text-yellow-300 cursor-pointer">
-            Teachers
-          </p>
-
-        </nav>
-
-      </aside>
+    <p
+      onClick={() =>
+        navigate("/result-entry")
+      }
+      className="hover:text-yellow-300 cursor-pointer"
+    >
+      Result Entry
+    </p>
+<p
+  onClick={() =>
+    navigate("/report-generator")
+  }
+  className="hover:text-yellow-300 cursor-pointer"
+>
+  Report Cards
+</p>
+    <p
+  onClick={() =>
+    navigate("/teacher-registration")
+  }
+  className="hover:text-yellow-300 cursor-pointer"
+>
+  Teachers
+</p>
+  </nav>
+</aside>
 
       {/* MAIN CONTENT */}
       <main className="flex-1 p-8">
