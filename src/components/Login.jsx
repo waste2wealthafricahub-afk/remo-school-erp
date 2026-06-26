@@ -31,7 +31,9 @@ export default function Login() {
     if (error) {
       alert(error.message);
     } else {
-      navigate("/dashboard");
+      setTimeout(() => {
+  navigate("/dashboard");
+}, 300);
     }
   };
 

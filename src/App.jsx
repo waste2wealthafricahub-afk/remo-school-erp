@@ -81,7 +81,6 @@ export default function App() {
         <Route path="/results" element={<StudentResults />} />
         <Route path="/report-card" element={<ReportCardGenerator />} />
         <Route path="/teacher-login" element={<TeacherLogin />} />
-        <Route path="/report-extras" element={<ReportExtrasForm />} />
         <Route
   path="/teacher-dashboard"
   element={
@@ -160,7 +159,14 @@ export default function App() {
     </ProtectedRoute>
   }
 />
-
+<Route
+  path="/report-extras"
+  element={
+    <ProtectedRoute>
+      <ReportExtrasForm />
+    </ProtectedRoute>
+  }
+/>
 <Route
   path="/teacher-registration"
   element={
