@@ -152,7 +152,6 @@ export default function App() {
     </ProtectedRoute>
   }
 />
-
 <Route
   path="/report-generator"
   element={

@@ -160,6 +160,14 @@ export default function AdminDashboard() {
 >
   Report Cards
 </p>
+<p
+  onClick={() =>
+    navigate("/report-extras")
+  }
+  className="hover:text-yellow-300 cursor-pointer"
+>
+  Report Extras
+</p>
     <p
   onClick={() =>
     navigate("/teacher-registration")
