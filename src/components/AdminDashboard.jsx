@@ -152,6 +152,14 @@ export default function AdminDashboard() {
     >
       Result Entry
     </p>
+    <p
+  onClick={() =>
+    navigate("/result-editor")
+  }
+  className="hover:text-yellow-300 cursor-pointer"
+>
+  Edit Results
+</p>
 <p
   onClick={() =>
     navigate("/report-generator")

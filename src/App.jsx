@@ -22,7 +22,7 @@ import StudentDashboard from "./components/StudentDashboard";
 import ReportExtrasForm from "./components/ReportExtrasForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 import TeacherProtectedRoute from "./components/TeacherProtectedRoute";
-
+import ResultEditor from "./components/ResultEditor";
 export default function App() {
   const location = useLocation();
 
@@ -172,6 +172,13 @@ export default function App() {
   element={
     <ProtectedRoute>
       <TeacherRegistration />
+    </ProtectedRoute>
+  }
+/><Route
+  path="/result-editor"
+  element={
+    <ProtectedRoute>
+      <ResultEditor />
     </ProtectedRoute>
   }
 />
